@@ -15,7 +15,7 @@ function Sessions() {
         <div>
             {allSessions && (
                 <div>
-                    <h2>All Training Plans</h2>
+                    <h2>All Training </h2>
                     <ul>
                         {allSessions.map((plan) => (
                             <li key={plan._id}>
