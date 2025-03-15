@@ -1,18 +1,12 @@
 import { Router } from 'express';
-import {
-    getAllTrainingPlans,
-    getTrainingPlan,
-    createTrainingPlan,
-    updateTrainingPlan,
-    deleteTrainingPlan
-} from '../controllers/trainingPlan.js';
+import * as controller from '../controllers/trainingPlan.js';
 
 const router = Router();
 
-router.get('/', getAllTrainingPlans);
-router.get('/:id', getTrainingPlan);
-router.post('/', createTrainingPlan);
-router.patch('/:id', updateTrainingPlan);
-router.delete('/:id', deleteTrainingPlan);
+router.get('/', controller.getAllTrainingPlans);
+router.get('/:id', controller.getTrainingPlan);
+router.post('/', controller.createTrainingPlan);
+router.patch('/:id', controller.updateTrainingPlan);
+router.delete('/:id', controller.deleteTrainingPlan);
 
 export default router;

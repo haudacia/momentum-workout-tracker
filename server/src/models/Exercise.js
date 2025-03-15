@@ -1,24 +1,9 @@
 import { model, Schema } from "mongoose";
 
 const ExerciseSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    sets: {
-        type: Number,
-        required: true,
-        default: 1,
-    },
-    reps: {
-        type: Number
-    },
-    weight: {
-        type: Number
-    },
-    usesMachine: {
-        type: Boolean
-    },
+    name: { type: String, required: true },
+    muscleGroup: String,
+    usesMachine: Boolean,
 });
 
 const Exercise = model('Exercise', ExerciseSchema);

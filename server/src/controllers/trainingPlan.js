@@ -13,7 +13,7 @@ const getTrainingPlan = async (req, res) => {
     const { id } = req.params;
 
     try {
-        const trainingPlan = await TrainingPlan.findById(id);
+        const trainingPlan = await TrainingPlan.findById(id).populate('sessions');
         res.status(200).json(trainingPlan);
     } catch (err) {
         res.status(404).json({ message: err.message });

@@ -1,18 +1,12 @@
 import { Router } from 'express';
-import {
-    getAllExercises,
-    getExercise,
-    createExercise,
-    updateExercise,
-    deleteExercise
-} from '../controllers/exercise.js';
+import * as controller from '../controllers/exercise.js';
 
 const router = Router();
 
-router.get('/', getAllExercises);
-router.get('/:id', getExercise);
-router.post('/', createExercise);
-router.patch('/:id', updateExercise);
-router.delete('/:id', deleteExercise);
+router.get('/', controller.getAllExercises);
+router.get('/:id', controller.getExercise);
+router.post('/', controller.createExercise);
+router.patch('/:id', controller.updateExercise);
+router.delete('/:id', controller.deleteExercise);
 
 export default router;
